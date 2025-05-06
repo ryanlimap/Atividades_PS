@@ -1,54 +1,128 @@
-# 📚 Repositório de Atividades - Projeto de sistemas (PS)  
+# Calculadora com FastAPI
 
-Bem-vindo ao repositório da disciplina **Projeto de sistema**! 🎉  
-Aqui você encontrará todas as atividades desenvolvidas ao longo do curso, cada uma em sua respectiva *branch*.  
+## 📝 Descrição
 
----
+Esta aplicação é uma **API REST** desenvolvida com **FastAPI** que realiza operações matemáticas básicas: soma, subtração, multiplicação e divisão. Cada operação é exposta como um **endpoint** que aceita dois números como entrada e retorna o resultado da operação.
 
-## 📋 Estrutura do Repositório  
+## ✨ Funcionalidades
 
-Cada *branch* deste repositório corresponde a uma atividade prática da disciplina. Abaixo está a lista das *branches* disponíveis:  
+- Operações básicas (Soma, Subtração, Multiplicação, Divisão)
 
-### 🌿 Branches  
-- `main` ➡️ **Branch principal** (XX)
-- `factory_reflection_calc` ➡️ **Factory / Reflection** (Calculadora em Java utilizando Factory e reflection)
-- *(Mais branches serão adicionadas conforme o avanço da disciplina!)*  
+## 🔚 Endpoints
 
----
+### 1. Soma 
 
-## 🛠️ Como Utilizar  
+- URL: /add
+- Método: POST
+- Descrição: Soma dois números.
+- Exemplo de corpo da Req:
 
-1. **Clone o repositório**  
-   ```bash
-   git clone https://github.com/seu-usuario/doo-atividades.git
-   ```
+```
+{
+  "value1": 10,
+  "value2": 5
+}
+```
 
-2. **Navegue até a branch desejada**  
-   ```bash
-   git checkout atividade-01
-   ```
-   *(Substitua `atividade-01` pelo nome da branch que deseja acessar.)*  
+- Exemplo de resposta:
 
-3. **Explore os arquivos e implementações** 📂  
-   Cada branch contém:  
-   - Código-fonte da atividade (`/src`)  
-   - Documentação (se aplicável)  
-   - Instruções específicas (em `README.md` da branch)  
+```
+{
+  "result": 15
+}
+```
 
----
+### 2. Subtração 
 
-## 📌 Regras e Observações  
+- URL: /subtract
+- Método: POST
+- Descrição: Subtrai o segundo número do primeiro.
+- Exemplo de corpo da Req:
 
-✔️ **Não faça commits diretamente na `main`** – Sempre crie uma *branch* para suas alterações.  
-✔️ **Mantenha o padrão de nomenclatura** – `nome_do_conteúdo` para facilitar a organização.  
-✔️ **Dúvidas?** Abra uma *issue* ou consulte o autor e/ou professor! 💡  
+```
+{
+  "value1": 10,
+  "value2": 5
+}
+```
 
----
+- Exemplo de resposta:
 
-Feito por Ryan Lima Peçanha 👨‍💻 🫡 
+```
+{
+  "result": 5
+}
+```
 
-*(Atualizado em: 📅 `26/03/2025`)*  
+### 3. Multiplicação 
 
----  
+- URL: /multiply
+- Método: POST
+- Descrição: Multiplica dois números.
+- Exemplo de corpo da Req:
 
-🔹 **Happy Coding!** 🔹
+```
+{
+  "value1": 10,
+  "value2": 5
+}
+```
+
+- Exemplo de resposta:
+
+```
+{
+  "result": 50
+}
+```
+
+### 4. Divisão 
+
+- URL: /divide
+- Método: POST
+- Descrição: Divide o primeiro número pelo segundo. Retorna um erro se o divisor for zero.
+- Exemplo de corpo da Req:
+
+```
+{
+  "value1": 10,
+  "value2": 5
+}
+```
+
+- Exemplo de resposta:
+
+```
+{
+  "result": 2.0
+}
+```
+
+- Erro para Divisão por Zero:
+
+```
+{
+  "result": "Error: Division by zero is not allowed."
+}
+```
+
+## ▶️ Como Executar
+
+1. Clone o repositório
+
+2. Instale as dependências:
+
+```
+pip install fastapi uvicorn
+```
+
+3. Execute o servidor:
+
+```
+uvicorn main:app --reload
+```
+
+## 📌 Observações
+
+- Reflection permite descobrir operações em runtime
+- Novas operações são plugáveis sem modificar código existente
