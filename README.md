@@ -124,5 +124,5 @@ uvicorn main:app --reload
 
 ## 📌 Observações
 
-- Reflection permite descobrir operações em runtime
-- Novas operações são plugáveis sem modificar código existente
+- Certifique-se de que o servidor está rodando antes de enviar requisições.
+- Utilize a documentação interativa para testar os endpoints de forma mais fácil.
