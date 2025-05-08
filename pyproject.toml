@@ -14,9 +14,7 @@ authors = [
 ]
 classifiers = [
     "Programming Language :: Python :: 3",
-    "License :: OSI Approved :: MIT License",
-    "Operating System :: OS Independent",
-    "Framework :: FastAPI"
+    "Operating System :: OS Independent"
 ]
 dependencies = [
     "fastapi>=0.100",
