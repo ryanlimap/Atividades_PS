@@ -13,6 +13,7 @@ Cada *branch* deste repositório corresponde a uma atividade prática da discipl
 - `main` ➡️ **Branch principal** (XX)
 - `calc_mvc` ➡️ **Factory / Reflection** (Calculadora em Java utilizando Factory e reflection)
 - `calc_fastpi` ➡️ **FastAPI/Uvicorn** ( Calculadora em Python utilizando endpoints junto a FastAPI)
+- - `calcfastpi_lib` ➡️ **FastAPI/Uvicorn** ( Calculadora em Python utilizando endpoints junto a FastAPI com Action para lib no PyPi)
 - *(Mais branches serão adicionadas conforme o avanço da disciplina!)*  
 
 ---
